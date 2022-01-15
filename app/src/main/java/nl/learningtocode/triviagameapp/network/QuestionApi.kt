@@ -1,6 +1,5 @@
 package nl.learningtocode.triviagameapp.network
 
-import com.google.gson.annotations.SerializedName
 import nl.learningtocode.triviagameapp.model.Question
 import nl.learningtocode.triviagameapp.util.Constants.BASE_URL
 import retrofit2.http.GET
