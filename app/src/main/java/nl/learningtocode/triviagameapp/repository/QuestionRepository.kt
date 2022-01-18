@@ -2,7 +2,6 @@ package nl.learningtocode.triviagameapp.repository
 
 import android.util.Log
 import nl.learningtocode.triviagameapp.data.DataOrException
-import nl.learningtocode.triviagameapp.model.Question
 import nl.learningtocode.triviagameapp.model.QuestionItem
 import nl.learningtocode.triviagameapp.network.QuestionApi
 import javax.inject.Inject

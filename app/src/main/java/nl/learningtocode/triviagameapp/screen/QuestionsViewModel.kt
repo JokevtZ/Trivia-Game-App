@@ -1,6 +1,5 @@
 package nl.learningtocode.triviagameapp.screen
 
-import android.app.Application
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
