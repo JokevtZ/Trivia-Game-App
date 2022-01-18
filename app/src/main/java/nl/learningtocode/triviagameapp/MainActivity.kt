@@ -13,11 +13,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import nl.learningtocode.triviagameapp.screen.QuestionsViewModel
 import nl.learningtocode.triviagameapp.ui.theme.TriviaGameAppTheme
 
-private val size: String
-    get() {
-        return ""
-    }
-
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +37,7 @@ fun TriviaHome(viewModel: QuestionsViewModel = hiltViewModel()){
 fun Question(viewModel: QuestionsViewModel){
     val question = viewModel.data.value.data?.toMutableList()
 
-    Log.d("SIZE", "question: ${size}")
+    Log.d("SIZE", "Question: ${question?.size}")
 }
 
 @Preview(showBackground = true)

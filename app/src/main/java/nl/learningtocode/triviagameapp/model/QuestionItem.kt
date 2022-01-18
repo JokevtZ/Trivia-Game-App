@@ -1,6 +1,6 @@
 package nl.learningtocode.triviagameapp.model
 
-data class Result(
+data class QuestionItem(
     val category: String,
     val correct_answer: String,
     val difficulty: String,
