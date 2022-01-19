@@ -11,6 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import nl.learningtocode.triviagameapp.screen.QuestionsViewModel
+import nl.learningtocode.triviagameapp.screen.TriviaHome
 import nl.learningtocode.triviagameapp.ui.theme.TriviaGameAppTheme
 
 @AndroidEntryPoint
@@ -28,17 +29,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun TriviaHome(viewModel: QuestionsViewModel = hiltViewModel()){
-    Question(viewModel)
-}
-
-@Composable
-fun Question(viewModel: QuestionsViewModel){
-    val question = viewModel.data.value.data?.toMutableList()
-
-    Log.d("SIZE", "Question: ${question?.size}")
-}
 
 @Preview(showBackground = true)
 @Composable
