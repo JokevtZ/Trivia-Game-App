@@ -4,7 +4,5 @@ data class QuestionItem(
     val answers: List<String>,
     val category: String,
     val correct_answer: String,
-    val difficulty: String,
-    val question: String,
-    val type: String
+    val question: String
 )
