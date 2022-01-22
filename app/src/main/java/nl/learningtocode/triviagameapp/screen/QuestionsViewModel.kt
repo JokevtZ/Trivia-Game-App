@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import nl.learningtocode.triviagameapp.data.DataOrException
+import nl.learningtocode.triviagameapp.model.QuestionItem
 import nl.learningtocode.triviagameapp.repository.QuestionRepository
 import javax.inject.Inject
 

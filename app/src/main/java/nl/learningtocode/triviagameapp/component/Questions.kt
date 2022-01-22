@@ -35,7 +35,7 @@ import nl.learningtocode.triviagameapp.util.AppColors
 // Handling all questions from json file from web link
 @Composable
 fun Questions(viewModel: QuestionsViewModel){
-    val question = viewModel.data.value.data?.toMutableList()
+    val questions = viewModel.data.value.data?.toMutableList()
 
     val questionIndex = remember {
         mutableStateOf(0)
@@ -44,18 +44,23 @@ fun Questions(viewModel: QuestionsViewModel){
     if (viewModel.data.value.loading == true){
         Log.d("Loading", "Questions: Loading...")
     }else {
-            val questions = try {
-                question?.get(questionIndex.value)
+            val question = try {
+                questions?.get(questionIndex.value)
             }catch (exception : Exception){
                 null
             }
 
-            if (question != null){
-                QuestionDisplay(question = questions!!, questionIndex = questionIndex, viewModel = viewModel)
+            if (questions != null) {
+
+                QuestionDisplay(
+                    question = question!!,
+                    questionIndex = questionIndex,
+                    viewModel = viewModel
+                )
                 {
-                questionIndex.value = questionIndex.value + 1
+                    questionIndex.value = questionIndex.value + 1
                 }
-        }
+            }
     }
 }
 
@@ -101,7 +106,7 @@ fun QuestionDisplay(
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.Start)
         {
-        QuestionTracker()
+        QuestionTracker(counter = questionIndex.value)
             DottedLine(pathEffect = pathEffect)
 
              Column {
