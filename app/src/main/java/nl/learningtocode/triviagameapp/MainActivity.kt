@@ -21,13 +21,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             TriviaGameAppTheme {
                 // A surface container using the 'background' color from the theme
-<<<<<<< HEAD
-                Surface(color = MaterialTheme.colors.background){
 
-=======
-                Surface(color = MaterialTheme.colors.background) {
+                Surface(color = MaterialTheme.colors.background){
                     TriviaHome()
->>>>>>> develop
+
                 }
             }
         }
@@ -39,6 +36,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview() {
     TriviaGameAppTheme {
-
     }
 }
+
