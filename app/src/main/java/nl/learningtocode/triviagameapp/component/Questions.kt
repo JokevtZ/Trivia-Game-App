@@ -224,7 +224,7 @@ fun DottedLine(pathEffect: PathEffect){
 
 @Preview
 @Composable
-fun ShowProgress(score: Int = 12){
+fun ShowProgress(score: Int = 25){
 
     val gradient = Brush.linearGradient(
         listOf(
